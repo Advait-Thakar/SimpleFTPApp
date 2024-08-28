@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.navbar {
+    position: fixed;
+    /* Fixes the navbar to the top of the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Full width of the viewport */
+    background-color: #fff;
+    /* Background color for the navbar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional shadow for the navbar */
+    padding: 10px 0;
+    /* Padding for top and bottom */
+    display: flex;
+    justify-content: center;
+    /* Center-aligns the logo horizontally */
+    z-index: 1000;
+    /* Ensures the navbar stays on top */
+    transition: all 0.3s ease-in-out;
+    /* Smooth transition for size change */
+}
+
+.navbar.large-logo h1 {
+    font-size: 2.5rem;
+    /* Larger size for the logo */
+}
+
+.navbar.small-logo h1 {
+    font-size: 1.8rem;
+    /* Smaller size for the logo */
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    scroll-behavior: smooth;
+}
+
+.main-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    height: 100vh;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #333;
+}
+
+.landingContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.landingHeader h1 {
+    font-size: 2.5rem;
+    line-height: 1.4;
+    color: #333;
+}
+
+.landingHeader span {
+    color: #512da8;
+    font-weight: bold;
+    font-size: 2.7rem;
+    transition: all 0.6s ease-in-out;
+}
+
+.landingPic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-link {
+    font-size: 4rem;
+    color: #512da8;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.icon-link:hover {
+    transform: scale(1.2);
+    color: #3d3d3d;
+}
+
+.icons {
+    margin: 30px 0 50px;
+}
+
+.icons a {
+    font-size: 2rem;
+    color: #512da8;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 75px;
+    margin: 0 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.icons a.active {
+    background-color: #512da8;
+    color: #fff;
+    transition: all 0.6s ease-in-out;
+}
+
+.sub-text {
+    margin-bottom: 30px;
+}
+
+.sub-text h4 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.get-started {
+    background-color: #512da8;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+    &:hover {
+        background-color: #f9f9f9;
+        border: 1px solid black;
+        color: #512da8;
+        transition: all 0.6s ease-in-out;
+    }
+}
+
+.hero2 .row1,
+.hero2 .row2 {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Optional background color */
+    width: 100vw;
+    /* Optional padding */
+    height: 100vh;
+    /* Full viewport height */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Two equal columns */
+    grid-template-rows: repeat(2, 1fr);
+    /* Two equal rows */
+    gap: 0px 25px;
+    /* Space between grid items */
+    width: 100%;
+    /* Full width */
+    max-width: 1200px;
+    /* Optional max width for large screens */
+    height: 100%;
+    /* Full height of the section */
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.grid-item h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.grid-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        /* Single column layout for small screens */
+        grid-template-rows: repeat(4, 1fr);
+        /* Four rows for small screens */
+    }
+}
